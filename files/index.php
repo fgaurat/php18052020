@@ -46,7 +46,13 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    <?php foreach( $file_content as $line):?>
+                        <tr>
+                            <?php foreach(explode(',',$line) as $l): ?>
+                                <td><?=$l?></td>
+                            <?php endforeach;?>
+                        </tr>
+                    <?php endforeach;?>
                 </tbody>
 
             </table>
